@@ -1,1 +1,75 @@
-# A1
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت‌نام مسابقه کاراته</title>
+</head>
+<body>
+    <h1>فرم ثبت‌نام مسابقه کاراته</h1>
+    <form action="https://formspree.io/f/{your-email}" method="POST">
+        <label for="fullname">نام و نام خانوادگی:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+        
+        <label for="birthdate">تاریخ تولد:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+        
+        <label for="nationalid">کد ملی:</label>
+        <input type="text" id="nationalid" name="nationalid" pattern="\d{10}" title="کد ملی باید 10 رقم باشد" required><br><br>
+        
+        <label for="birthyear">سال تولد (1300 تا 1403):</label>
+        <input type="number" id="birthyear" name="birthyear" min="1300" max="1403" required><br><br>
+
+        <label for="gender">جنسیت:</label>
+        <input type="radio" id="male" name="gender" value="آقا" required>
+        <label for="male">آقا</label>
+        <input type="radio" id="female" name="gender" value="خانم">
+        <label for="female">خانم</label><br><br>
+
+        <label for="phone">شماره تماس موبایل:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="شماره تماس معتبر نیست" required><br><br>
+        
+        <label for="address">آدرس محل سکونت:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <label for="club">نام باشگاه:</label>
+        <input type="text" id="club" name="club" required><br><br>
+
+        <label for="province">استان:</label>
+        <input type="text" id="province" name="province" required><br><br>
+
+        <label for="city">شهر:</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="karateStyle">سبک کاراته:</label>
+        <select id="karateStyle" name="karateStyle" required>
+            <option value="شوتوکان">شوتوکان</option>
+            <option value="گوژوشین">گوژوشین</option>
+            <option value="کایاکوشین">کایاکوشین</option>
+            <option value="وایدوکای">وایدوکای</option>
+            <option value="کیوکوشین">کیوکوشین</option>
+            <option value="اوکیناوایی">اوکیناوایی</option>
+            <!-- اضافه کردن سایر سبک‌ها -->
+        </select><br><br>
+
+        <label for="belt">کمربند و دان فعلی:</label>
+        <input type="text" id="belt" name="belt" required><br><br>
+
+        <label for="coach">مربی یا استاد:</label>
+        <input type="text" id="coach" name="coach" required><br><br>
+
+        <label for="weight">وزن (به کیلوگرم):</label>
+        <input type="number" id="weight" name="weight" min="30" max="150" required><br><br>
+
+        <label for="competitionType">نوع مسابقه:</label>
+        <input type="checkbox" id="kumite" name="competitionType" value="کمیته">
+        <label for="kumite">کمیته</label>
+        <input type="checkbox" id="kata" name="competitionType" value="کاتا">
+        <label for="kata">کاتا</label>
+        <input type="checkbox" id="both" name="competitionType" value="هر دو">
+        <label for="both">هر دو</label><br><br>
+
+        <input type="submit" value="ارسال">
+    </form>
+</body>
+</html>
